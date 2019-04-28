@@ -1,0 +1,122 @@
+\documentclass{article}
+
+% Для букв в формулах
+\usepackage{amssymb}
+
+\usepackage[utf8]{inputenc}
+
+% Русский язык
+\usepackage[russian]{babel}
+
+% Шрифт
+\renewcommand{\familydefault}{\sfdefault}
+
+% Графики
+\usepackage{pgfplots}
+% \RequirePackage{luatex85,shellesc}
+
+
+\title{Математика}
+\author{Полоз Алексей}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\maketitle
+
+\section{Функции}
+\subsection{Понятие}
+Функция f(x) --
+\begin{itemize}
+    \item Отображение из множества определения в множество значения функции
+    \item  Соответствие между различными значениями аргумента x и значениями функции f(x)
+\end{itemize}
+
+$x \mapsto f(x), x \in \mathbb{R}$ 
+
+
+\noindent\rule{\textwidth}{1pt}
+
+Свойства:
+\begin{itemize}
+    \item Каждому аргументу соответствует только одно значение f(x)
+\end{itemize}
+
+
+\subsection{Область определения и значения}
+$D(f)$ -- область определения функции (те значения x, для которых функция задана)
+
+$E(f)$ -- область значения функции (все значения, что функции может принимать)
+
+\noindent\rule{\textwidth}{1pt}
+
+Примеры:
+\begin{itemize}
+    \item $f(x)=\frac{1}{x-1}, D(f)=\mathbb{R}\backslash\{1\}, E(f)=\mathbb{R}\backslash\{0\}$
+\end{itemize}
+
+
+\subsection{График}
+<рандомная линия поверх пересечения осей x, y надпись y=f(x)>
+
+
+\subsection{Непрерывность}
+Разрывы
+
+\begin{itemize}
+    \item Одна точка выбивается
+    \item Резкий скачок значения функции
+    \item Разрывы с ассимптотой (прямая, к которой приближается, но не пересекает)
+\end{itemize}
+
+\subsection{Гладкость}
+отсутствие углов
+
+! бывает не гладкая ни в одной точке
+Примеры:
+Функция Веерштрасса
+
+
+\section{Предел и производная}
+\subsection{Понятие}
+$\lim_{}$
+
+! Неформально:
+
+$$lim_{x \to a} f(x)$$ -- величина, к которой стремится $f(x)$, если $x$ стремится к $a$
+
+\subsection{Непрерывность}
+Функция \textsl{}$f(x)$ непрерывна в точке $x=a$: $$\lim_{x \to a} f(x) = f(\lim_{x \to a} x) = f(a)$$
+
+\subsection{Производная}
+Скорость роста функции
+
+<график>
+
+$y = k*x + b$
+
+$k = \frac{f(x + \Delta x) - f(x)}{\Delta x}$ -- скорость роста
+
+$$f^\prime(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$ -- производная функции $f(x)$ в точке $x$
+
+\subsection{Гладкость}
+Гладкие функции -- производная которых непрерывна
+
+
+
+
+\section{Обозначения}
+\begin{tabular}{ | l | l | }
+	\hline
+	Обозначение & Значение \\ \hline
+	$\to$ & Стремится \\
+	\hline
+\end{tabular}
+
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}
