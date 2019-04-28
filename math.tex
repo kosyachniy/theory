@@ -1,9 +1,10 @@
 \documentclass{article}
 
-% Для букв в формулах
-\usepackage{amssymb}
-
+% Кодировка
 \usepackage[utf8]{inputenc}
+
+% Для написаний
+\usepackage{amssymb}
 
 % Русский язык
 \usepackage[russian]{babel}
@@ -12,21 +13,26 @@
 \renewcommand{\familydefault}{\sfdefault}
 
 % Графики
-\usepackage{pgfplots}
+% \usepackage{pgfplots}
 % \RequirePackage{luatex85,shellesc}
+
+% Ссылки
+\usepackage{hyperref}
+
+%
+\usepackage{natbib}
+\usepackage{graphicx}
 
 
 \title{Математика}
 \author{Полоз Алексей}
 
-\usepackage{natbib}
-\usepackage{graphicx}
-
 \begin{document}
 
 \maketitle
 
-\section{Функции}
+\section{Функция}
+\label{section:function}
 \subsection{Понятие}
 Функция f(x) --
 \begin{itemize}
@@ -71,6 +77,12 @@ $E(f)$ -- область значения функции (все значени�
     \item Разрывы с ассимптотой (прямая, к которой приближается, но не пересекает)
 \end{itemize}
 
+\noindent\rule{\textwidth}{1pt}
+
+\hyperref[section:derivative]{производная $\to$}
+
+Функция $f(x)$ непрерывна в точке $x=a$: $$\lim_{x \to a} f(x) = f(\lim_{x \to a} x) = f(a)$$
+
 \subsection{Гладкость}
 отсутствие углов
 
@@ -78,19 +90,61 @@ $E(f)$ -- область значения функции (все значени�
 Примеры:
 Функция Веерштрасса
 
+\noindent\rule{\textwidth}{1pt}
 
-\section{Предел и производная}
-\subsection{Понятие}
+\hyperref[section:derivative]{производная $\to$}
+
+Гладкие функции -- производная которых непрерывна
+
+
+\section{Предел}
+\label{section:limit}
+\subsection{Функции}
 $\lim_{}$
 
 ! Неформально:
 
-$$lim_{x \to a} f(x)$$ -- величина, к которой стремится $f(x)$, если $x$ стремится к $a$
+$$\lim_{x \to a} f(x)$$ -- величина, к которой стремится $f(x)$, если $x$ стремится к $a$
 
-\subsection{Непрерывность}
-Функция \textsl{}$f(x)$ непрерывна в точке $x=a$: $$\lim_{x \to a} f(x) = f(\lim_{x \to a} x) = f(a)$$
+\noindent\rule{\textwidth}{1pt}
 
-\subsection{Производная}
+Примеры:
+
+\begin{itemize}
+	\item $(1 + x)^\frac{1}{x}$
+
+		\begin{tabular}{ | l | l | }
+			\hline
+			$x$ & $f(x)$ \\ \hline
+			$0.1$ & $2.593...$ \\
+			$0.01$ & $2.704...$ \\
+			$0.001$ & $2.716...$ \\
+			$0.0001$ & $2.718...$ \\
+			\hline
+		\end{tabular}
+
+		$$\lim_{x \to 0} (1 + x)^\frac{1}{x} = 2.7182...$$
+
+	\item  $\frac{1}{x}$
+
+		\begin{tabular}{ | l | l | }
+			\hline
+			$x$ & $f(x)$ \\ \hline
+			$0.1$ & $10$ \\
+			$0.01$ & $100$ \\
+			$0.001$ & $1000$ \\
+			$0.0001$ & $10000$ \\
+			\hline
+		\end{tabular}
+
+		$$\lim_{x \to 0} \frac{1}{x} = \infty$$
+
+\end{itemize}
+
+
+\section{Производная}
+\label{section:derivative}
+\subsection{Понятие}
 Скорость роста функции
 
 <график>
@@ -101,8 +155,6 @@ $k = \frac{f(x + \Delta x) - f(x)}{\Delta x}$ -- скорость роста
 
 $$f^\prime(x) = \lim_{\Delta x \to 0} \frac{f(x + \Delta x) - f(x)}{\Delta x}$$ -- производная функции $f(x)$ в точке $x$
 
-\subsection{Гладкость}
-Гладкие функции -- производная которых непрерывна
 
 
 
